@@ -7,6 +7,7 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+import AddAdmin from './components/Admin/AddAdmin';
 
 function App() {
   return (
@@ -15,6 +16,9 @@ function App() {
         <Navbar title="CabBookingApp" admin="Admin" customer="Customer" driver="Driver" operator="Operator" tripbooking="Trip-Booking" />
         <Container fluid className="my-1"> {/* use gx-0 for setting gutter length */}
           <Switch>
+            <Route exact path="/">
+              <h1>this is home</h1>
+            </Route>
             {/* admin menu and content */}
             <Route exact path="/admin">
               <Row>
@@ -23,6 +27,7 @@ function App() {
                 </Col>
                 <Col lg={9}>
                   <h1>This is content side</h1>
+                  <AddAdmin />
                 </Col>
               </Row>
             </Route>
