@@ -8,47 +8,34 @@ import {
   Route
 } from "react-router-dom";
 import AddAdmin from './components/Admin/AddAdmin';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import ViewAdmin from './components/Admin/ViewAdmin';
 
 function App() {
   return (
-    <>
-      <Router>
-        <Navbar title="CabBookingApp" admin="Admin" customer="Customer" driver="Driver" operator="Operator" tripbooking="Trip-Booking" />
-        <Container fluid className="my-1"> {/* use gx-0 for setting gutter length */}
-          <Switch>
-            <Route exact path="/">
-              <h1>this is home</h1>
-            </Route>
-            {/* admin menu and content */}
-            <Route exact path="/admin">
-              <Row>
-                <Col lg={3} >
-                  <AdminMenu />
-                </Col>
-                <Col lg={9}>
-                  <h1>This is content side</h1>
-                  <AddAdmin />
-                </Col>
-              </Row>
-            </Route>
-            {/* customer menu and content */}
-            <Route exact path="/customer">
-              <Row>
-                <Col lg={3} >
-                  <h1>this is menu side</h1>
-                </Col>
-                <Col lg={9}>
-                  <h1>This is content side</h1>
-                </Col>
-              </Row>
-            </Route>
-          </Switch>
-        </Container>
+    <Router>
+      <ToastContainer />
+      <Navbar title="CabBookingApp" admin="Admin" customer="Customer" driver="Driver" operator="Operator" tripbooking="Trip-Booking" />
+      <Container fluid className="my-1"> {/* use gx-0 for setting gutter length */}
+        <Switch>
+          <Row>
+            <Col lg={3} >
+              <Route path="/admin" component={AdminMenu}  />
+            </Col>
+            <Col lg={9}>
+              <h1>This is content side</h1>
+              <Route path="/admin/addAdmin" component={AddAdmin} exact />
+              <Route path="/admin/viewAdmin" component={ViewAdmin} exact />
+            </Col>
+          </Row>
+          {/* customer menu and content */}
+        </Switch>
+      </Container>
 
-      </Router>
-
-    </>
+    </Router>
   );
 }
 
 export default App;
+

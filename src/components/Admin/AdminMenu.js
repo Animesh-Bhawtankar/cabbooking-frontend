@@ -1,23 +1,24 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 // import { ListGroup, ListGroupItem } from 'reactstrap'
 
 export default function AdminMenu() {
     return (
-        <div class="list-group">
-            <a href="#!" class="list-group-item list-group-item-action active" aria-current="true">
+        <div className="list-group">
+            <a href="#!" className="list-group-item list-group-item-action active" aria-current="true">
                 Menu
             </a>
-            <ul class="list-group list-group-flush">
-                <button class="list-group-item">Add New Admin</button>
-                <button class="list-group-item">Update an Admin</button>
-                <button class="list-group-item">Delete Admin</button>
-                <button class="list-group-item">Get Admin By ID</button>
-                <button class="list-group-item">View Admin Details</button>
-                <button class="list-group-item">View Trips Datewise</button>
-                <button class="list-group-item">View Trips Customerwise</button>
-                <button class="list-group-item">View All Trips</button>
-                <button class="list-group-item">View All Customers</button>
-                <button class="list-group-item">View All Drivers</button>
+            <ul className="list-group list-group-flush">
+                <Link className="list-group-item center btn btn-light" to="/admin/addAdmin" exact>Add New Admin</Link>
+                <button className="list-group-item btn btn-light">Update an Admin</button>
+                <button className="list-group-item btn btn-light">Delete Admin</button>
+                <button className="list-group-item center btn btn-light">Get Admin By ID</button>
+                <Link className="list-group-item center btn btn-light" to="/admin/viewAdmin" exact>View Admin Details</Link>
+                <button className="list-group-item btn btn-light">View Trips Datewise</button>
+                <button className="list-group-item btn btn-light">View Trips Customerwise</button>
+                <button className="list-group-item btn btn-light">View All Trips</button>
+                <button className="list-group-item btn btn-light">View All Customers</button>
+                <button className="list-group-item btn btn-light">View All Drivers</button>
             </ul>
         </div>
     )
