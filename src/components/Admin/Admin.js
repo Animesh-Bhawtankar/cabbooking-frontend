@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React from 'react'
+import { useHistory } from 'react-router'
 import { toast } from 'react-toastify'
 import {
     Card, CardImg, CardBody,
@@ -21,6 +22,10 @@ export default function Admin({ admin, update }) {
             }
         )
     }
+    const history = useHistory();
+    const handleRoute = () => {
+        history.push("/admin/updateAdmin");
+    }
     return (
         <Col className="my-3">
             <Card>
@@ -31,7 +36,7 @@ export default function Admin({ admin, update }) {
                     <CardSubtitle tag="h6" className="mb-2 text-muted">Address: {admin.address}</CardSubtitle>
                     <CardSubtitle tag="h6" className="mb-2 text-muted">Email: {admin.email}</CardSubtitle>
                     <CardSubtitle tag="h6" className="mb-2 text-muted">Mob. Number: {admin.mobileNumber}</CardSubtitle>
-                    <Button color="primary">Update</Button>
+                    <Button color="primary" onClick={handleRoute}>Update</Button>
                     <Button className="ms-2" color="danger" onClick={() => {deleteAdmin(admin.id)}}>Delete</Button>
                 </CardBody>
             </Card>

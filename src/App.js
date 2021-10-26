@@ -11,6 +11,7 @@ import AddAdmin from './components/Admin/AddAdmin';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ViewAdmin from './components/Admin/ViewAdmin';
+import UpdateAdmin from './components/Admin/UpdateAdmin';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
               <h1>This is content side</h1>
               <Route path="/admin/addAdmin" component={AddAdmin} exact />
               <Route path="/admin/viewAdmin" component={ViewAdmin} exact />
+              <Route path="/admin/updateAdmin" component={UpdateAdmin} exact />
             </Col>
           </Row>
           {/* customer menu and content */}
