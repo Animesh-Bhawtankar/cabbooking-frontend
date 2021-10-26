@@ -11,7 +11,6 @@ export default function AdminMenu() {
             <ul className="list-group list-group-flush">
                 <Link className="list-group-item center btn btn-light" to="/admin/addAdmin" exact>Add New Admin</Link>
                 <button className="list-group-item btn btn-light">Update an Admin</button>
-                <button className="list-group-item btn btn-light">Delete Admin</button>
                 <button className="list-group-item center btn btn-light">Get Admin By ID</button>
                 <Link className="list-group-item center btn btn-light" to="/admin/viewAdmin" exact>View Admin Details</Link>
                 <button className="list-group-item btn btn-light">View Trips Datewise</button>

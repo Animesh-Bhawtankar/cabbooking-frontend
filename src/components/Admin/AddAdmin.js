@@ -23,7 +23,7 @@ export default function AddAdmin() {
             (response) => {
                 console.log(response);
                 console.log("Success");
-                toast.success("Course Added Successfully");
+                toast.success("Admin Added Successfully");
 
             },
             (error) => {
