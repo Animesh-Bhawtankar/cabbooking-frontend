@@ -49,7 +49,6 @@ export default function ViewAdmin() {
                     )) : <h2>No Admin Found</h2>
                 } 
             </Row>
-
         </div>
     )
 }

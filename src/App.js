@@ -12,6 +12,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ViewAdmin from './components/Admin/ViewAdmin';
 import UpdateAdmin from './components/Admin/UpdateAdmin';
+import AdminById from './components/Admin/AdminById';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
               <Route path="/admin/addAdmin" component={AddAdmin} exact />
               <Route path="/admin/viewAdmin" component={ViewAdmin} exact />
               <Route path="/admin/updateAdmin" component={UpdateAdmin} exact />
+              <Route path="/admin/adminById" component={AdminById} exact />
             </Col>
           </Row>
           {/* customer menu and content */}

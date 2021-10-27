@@ -12,7 +12,7 @@ export default function AddAdmin() {
     const [admin, setAdmin] = useState({});
     //Form handler Function
     const handleForm = (e) => {
-        console.log(admin);
+        //console.log(admin);
         postDatatoServer(admin);
         e.preventDefault();
     }
@@ -67,7 +67,6 @@ export default function AddAdmin() {
                     }} />
                 </FormGroup>
                 <Button className="my-3 mx-3" color="info" type="submit">Add Admin</Button>
-                
                 <Button className="my-3" color="secondary" type="reset" value="reset">Clear All</Button>
             </Form>
             
