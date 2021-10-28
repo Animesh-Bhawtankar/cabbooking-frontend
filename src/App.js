@@ -38,6 +38,7 @@ import updateOperator from './components/Operator/UpdateOperator';
 import OperatorById from './components/Operator/OperatorById';
 import HomePage from './components/HomePage';
 import ViewCustomer from './components/Customer/ViewCustomer';
+import ViewCab from './components/Operator/ViewCab';
 // import Footer from './components/Footer';
 // import AboutMenu from './components/AboutUs/AboutMenu';
 // import AboutUs from './components/AboutUs/AboutUs';
@@ -65,9 +66,10 @@ function App() {
               <Route path="/admin/viewAdmin" component={ViewAdmin} exact />
               <Route path="/admin/updateAdmin" component={UpdateAdmin} exact />
               <Route path="/admin/adminById" component={AdminById} exact />
+              <Route path="/admin/tripsByCustId" component={ViewTripByCustId} exact />
               <Route path="/admin/viewAllTrips" component={ViewAllTrips}/>
               <Route path="/admin/viewAllCustomers" component={ViewCustomer}/>
-              {/* <Route path="/admin/viewAllDrivers" component={}/> */}
+              <Route path="/admin/viewAllDrivers" component={ViewDriver}/>
               <Route path="/tripBooking/addTrip" component={AddTrip} exact />
               <Route path="/tripBooking/viewAllTrips" component={ViewAllTrips} exact/> 
               <Route path="/tripBooking/updateTrip" component={UpdateTrip} exact/> 
@@ -85,9 +87,9 @@ function App() {
               <Route path="/driver/viewDriver" component={ViewDriver} exact/>
               <Route path="/driver/DriverByEmail" component={DriverByEmail} exact/>
               <Route path="/operator/addOperator" component={AddOperator} exact />
-              <Route path="/operator/viewOPerator" component={ViewOperator} exact />
               <Route path="/operator/updateOperator" component={updateOperator} exact />
               <Route path="/operator/operatorById" component={OperatorById} exact />
+              <Route path="/operator/cabDetails" component={ViewCab} exact />
               {/* <Route path="/aboutus" component={AboutUs}  /> */}
             </Col>
           </Row>
