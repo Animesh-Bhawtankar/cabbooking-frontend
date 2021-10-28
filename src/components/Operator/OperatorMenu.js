@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 export default function OperatorMenu() {
     return (
-        <div className="list-group">
+        <div className="list-group w-100 p-3">
             <a href="#!" className="list-group-item list-group-item-action active" aria-current="true">
                 Menu
             </a>
@@ -16,7 +16,14 @@ export default function OperatorMenu() {
                 <Link className="list-group-item center btn btn-light" to="/operator/cabDetails" exact>View All Cab Details</Link>
                 <Link className="list-group-item center btn btn-light" to="/operator/cabofType" exact>View Cab By Cab Type</Link>
                 <Link className="list-group-item center btn btn-light" to="/operator/totalTrips" exact>View Total Trips Taken</Link>
-                
+                <Link className="list-group-item center btn btn-light disabled" > </Link>
+                <Link className="list-group-item center btn btn-light disabled" > </Link>
+                <Link className="list-group-item center btn btn-light disabled" > </Link>
+                <Link className="list-group-item center btn btn-light disabled" > </Link>
+                <Link className="list-group-item center btn btn-light disabled" > </Link>
+                <Link className="list-group-item center btn btn-light disabled" > </Link>
+                <Link className="list-group-item center btn btn-light disabled" > </Link>
+                <Link className="list-group-item center btn btn-light disabled" > </Link>
             </ul>
         </div>
     )

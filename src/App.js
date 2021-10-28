@@ -57,7 +57,7 @@ function App() {
           <Route path="/"  component={HomePage} exact/>
           <Route path="/contactus" component={ContactUs}  />
           <Row>
-            <Col lg={3}>
+            <Col lg={3} className="border-end">
               <Route path="/admin" component={AdminMenu}  />
               <Route path="/tripBooking" component={TripBookingMenu}  />
               <Route path="/customer" component={CustomerMenu}  />
