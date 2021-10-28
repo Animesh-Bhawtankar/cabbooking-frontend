@@ -31,27 +31,43 @@ import DriverById from './components/Driver/DriverById';
 import ViewBestDriver from './components/Driver/ViewBestDriver';
 import ViewDriver from './components/Driver/ViewDriver';
 import DriverByEmail from './components/Driver/DriverByEmail';
+import OperatorMenu from './components/Operator/OperatorMenu';
+import AddOperator from './components/Operator/AddOperator';
+import ViewOperator from './components/Operator/ViewOperator';
+import updateOperator from './components/Operator/UpdateOperator';
+import OperatorById from './components/Operator/OperatorById';
+import HomePage from './components/HomePage';
+import ViewCustomer from './components/Customer/ViewCustomer';
+// import Footer from './components/Footer';
+// import AboutMenu from './components/AboutUs/AboutMenu';
+// import AboutUs from './components/AboutUs/AboutUs';
 
 function App() {
   return (
     <Router>
       <ToastContainer />
-      <Navbar title="CabBookingApp" admin="Admin" customer="Customer" driver="Driver" operator="Operator" tripbooking="Trip-Booking" />
-      <Container fluid className="my-1"> {/* use gx-0 for setting gutter length */}
+      <Navbar title="CabBookingApp" admin="Admin" customer="Customer" driver="Driver" operator="Operator" tripbooking="Trip-Booking" aboutus="About Us"/>
+      <Container fluid className="gx-0"> {/* use gx-0 for setting gutter length */}
         <Switch>
+          <Route path="/"  component={HomePage} exact/>
           <Row>
-            <Col lg={3} >
+            <Col lg={3}>
               <Route path="/admin" component={AdminMenu}  />
               <Route path="/tripBooking" component={TripBookingMenu}  />
               <Route path="/customer" component={CustomerMenu}  />
               <Route path="/driver" component={DriverMenu}  />
+              <Route path="/operator" component={OperatorMenu} />
+              {/* <Route path="/aboutus" component={AboutMenu}  /> */}
             </Col>
             <Col lg={9}>
-              <h1>This is content side</h1>
+              {/* <h1>This is content side</h1> */}
               <Route path="/admin/addAdmin" component={AddAdmin} exact />
               <Route path="/admin/viewAdmin" component={ViewAdmin} exact />
               <Route path="/admin/updateAdmin" component={UpdateAdmin} exact />
               <Route path="/admin/adminById" component={AdminById} exact />
+              <Route path="/admin/viewAllTrips" component={ViewAllTrips}/>
+              <Route path="/admin/viewAllCustomers" component={ViewCustomer}/>
+              {/* <Route path="/admin/viewAllDrivers" component={}/> */}
               <Route path="/tripBooking/addTrip" component={AddTrip} exact />
               <Route path="/tripBooking/viewAllTrips" component={ViewAllTrips} exact/> 
               <Route path="/tripBooking/updateTrip" component={UpdateTrip} exact/> 
@@ -68,12 +84,17 @@ function App() {
               <Route path="/driver/ViewBestDriver" component={ViewBestDriver} exact/>
               <Route path="/driver/viewDriver" component={ViewDriver} exact/>
               <Route path="/driver/DriverByEmail" component={DriverByEmail} exact/>
+              <Route path="/operator/addOperator" component={AddOperator} exact />
+              <Route path="/operator/viewOPerator" component={ViewOperator} exact />
+              <Route path="/operator/updateOperator" component={updateOperator} exact />
+              <Route path="/operator/operatorById" component={OperatorById} exact />
+              {/* <Route path="/aboutus" component={AboutUs}  /> */}
             </Col>
           </Row>
           {/* customer menu and content */}
         </Switch>
       </Container>
-
+      {/* <Footer /> */}
     </Router>
   );
 }

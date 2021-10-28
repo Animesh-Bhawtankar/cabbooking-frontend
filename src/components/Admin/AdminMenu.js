@@ -15,9 +15,9 @@ export default function AdminMenu() {
                 <Link className="list-group-item center btn btn-light" to="/admin/adminById" exact>View Admin By Id</Link>
                 <button className="list-group-item btn btn-light">View Trips Datewise</button>
                 <button className="list-group-item btn btn-light">View Trips Customerwise</button>
-                <button className="list-group-item btn btn-light">View All Trips</button>
-                <button className="list-group-item btn btn-light">View All Customers</button>
-                <button className="list-group-item btn btn-light">View All Drivers</button>
+                <Link className="list-group-item center btn btn-light" to="/admin/viewAllTrips">View All Trips</Link>
+                <Link className="list-group-item center btn btn-light" to="/admin/viewAllCustomers">View All Customers</Link>
+                <Link className="list-group-item center btn btn-light" to="/admin/viewAllDrivers">View All Drivers</Link>
             </ul>
         </div>
     )
