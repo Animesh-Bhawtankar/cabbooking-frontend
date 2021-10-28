@@ -40,7 +40,7 @@ export default function ViewCab() {
     }]);
     return (
         <div>
-            <Row sm="3" className="mx-3">
+            <Row sm="3" className="mx-2">
                 {
                     cab.length > 0 ? cab.map((item) => (
                         <Cab  cab={item} update={deleteCab}/>

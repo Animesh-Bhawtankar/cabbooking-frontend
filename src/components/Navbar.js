@@ -28,7 +28,7 @@ export default function Navbar(props) {
                             <Link className="nav-link active" aria-current="page" to="/tripbooking">{props.tripbooking}</Link>
                         </li>
                         <li className="nav-item mx-3">
-                            <Link className="nav-link active" aria-current="page" to="/aboutus">{props.aboutus}</Link>
+                            <Link className="nav-link active" aria-current="page" to="/contactus">{props.contactus}</Link>
                         </li>
                         
                         

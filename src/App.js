@@ -33,12 +33,16 @@ import ViewDriver from './components/Driver/ViewDriver';
 import DriverByEmail from './components/Driver/DriverByEmail';
 import OperatorMenu from './components/Operator/OperatorMenu';
 import AddOperator from './components/Operator/AddOperator';
-import ViewOperator from './components/Operator/ViewOperator';
+// import ViewOperator from './components/Operator/ViewOperator';
 import updateOperator from './components/Operator/UpdateOperator';
 import OperatorById from './components/Operator/OperatorById';
 import HomePage from './components/HomePage';
 import ViewCustomer from './components/Customer/ViewCustomer';
 import ViewCab from './components/Operator/ViewCab';
+import AddCab from './components/Operator/AddCab';
+import ViewCabOfType from './components/Operator/ViewCabOfType';
+import ViewBillByCust from './components/TripBooking/ViewBillByCust';
+import ContactUs from './components/ContactUs';
 // import Footer from './components/Footer';
 // import AboutMenu from './components/AboutUs/AboutMenu';
 // import AboutUs from './components/AboutUs/AboutUs';
@@ -47,10 +51,11 @@ function App() {
   return (
     <Router>
       <ToastContainer />
-      <Navbar title="CabBookingApp" admin="Admin" customer="Customer" driver="Driver" operator="Operator" tripbooking="Trip-Booking" aboutus="About Us"/>
+      <Navbar title="CabBookingApp" admin="Admin" customer="Customer" driver="Driver" operator="Operator" tripbooking="Trip-Booking" contactus="Contact Us"/>
       <Container fluid className="gx-0"> {/* use gx-0 for setting gutter length */}
         <Switch>
           <Route path="/"  component={HomePage} exact/>
+          <Route path="/contactus" component={ContactUs}  />
           <Row>
             <Col lg={3}>
               <Route path="/admin" component={AdminMenu}  />
@@ -58,7 +63,6 @@ function App() {
               <Route path="/customer" component={CustomerMenu}  />
               <Route path="/driver" component={DriverMenu}  />
               <Route path="/operator" component={OperatorMenu} />
-              {/* <Route path="/aboutus" component={AboutMenu}  /> */}
             </Col>
             <Col lg={9}>
               {/* <h1>This is content side</h1> */}
@@ -75,6 +79,7 @@ function App() {
               <Route path="/tripBooking/updateTrip" component={UpdateTrip} exact/> 
               <Route path="/tripBooking/viewTripById" component={ViewTripById} exact/> 
               <Route path="/tripBooking/viewTripByCustomer" component={ViewTripByCustId} exact/> 
+              <Route path="/tripBooking/totalBillofCustomer" component={ViewBillByCust} exact/> 
               <Route path="/customer/addCustomer" component={AddCustomer} exact/>
               <Route path="/customer/updateCustomer" component={UpdateCustomer} exact/>
               <Route path="/customer/customerById" component={CustomerById}/>
@@ -90,6 +95,9 @@ function App() {
               <Route path="/operator/updateOperator" component={updateOperator} exact />
               <Route path="/operator/operatorById" component={OperatorById} exact />
               <Route path="/operator/cabDetails" component={ViewCab} exact />
+              <Route path="/operator/addCab" component={AddCab} exact />
+              <Route path="/operator/cabofType" component={ViewCabOfType} exact />
+              <Route path="/operator/totalTrips" component={ViewAllTrips} exact />
               {/* <Route path="/aboutus" component={AboutUs}  /> */}
             </Col>
           </Row>

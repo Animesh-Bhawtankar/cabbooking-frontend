@@ -8,7 +8,7 @@ import {
     AiOutlineTwitter,
     AiOutlineGithub
 } from "react-icons/ai";
-import { FaDiscord } from "react-icons/fa";
+
 import { FaTelegramPlane } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
